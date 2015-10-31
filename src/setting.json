@@ -27,7 +27,7 @@
      "outputs":[
        {"serif":"お疲れ様でした"}
      ],
-     "append":{
+     "append":[{
        "speaker":"time",
        "conditions":[
          {
@@ -39,7 +39,19 @@
            ]
          }
        ]
+     },
+     {
+      "speaker":"weather",
+      "owm_app_id":"7cd63966189e7e20afd65233f5dca42f",
+      "owm_location_code":"1848354",
+      "conditions":[
+       {
+        "weather":[500,501,502,503,504,511,520,521,522,531],
+        "outputs":[{"serif":"雨が降っているみたいです。傘は持ちましたか?"}]
+       }
+      ]
      }
+   ]
    },
    {
      "outputs":[
@@ -59,6 +71,32 @@
       {"serif":"お昼はお野菜が多いものを食べましょう"}
     ]
   }
+  ]
+},
+{
+  "speaker":"weather",
+  "owm_app_id":"7cd63966189e7e20afd65233f5dca42f",
+  "owm_location_code":"1848354",
+  "conditions":[
+   {
+    "temp":{
+     "gt":30
+    },
+    "outputs":[{"serif":"暑いですね"}]
+   },
+   {
+    "temp":{
+     "lt":30,
+     "gt":15
+    },
+    "outputs":[{"serif":"涼しいですね"}]
+   },
+   {
+    "temp":{
+     "lt":15
+    },
+    "outputs":[{"serif":"寒いですね"}]
+   }
   ]
 },
 {
