@@ -74,41 +74,50 @@
   ]
 },
 {
-  "speaker":"weather",
-  "owm_app_id":"7cd63966189e7e20afd65233f5dca42f",
-  "owm_location_code":"1848354",
-  "conditions":[
-   {
-    "temp":{
-     "gt":30
-    },
-    "outputs":[{"serif":"暑いですね"}]
-   },
-   {
-    "temp":{
-     "lt":30,
-     "gt":15
-    },
-    "outputs":[{"serif":"涼しいですね"}]
-   },
-   {
-    "temp":{
-     "lt":15
-    },
-    "outputs":[{"serif":"寒いですね"}]
-   }
-  ]
-},
-{
-  "speaker":"event",
+  "speaker":"blank",
   "conditions":[
     {
-    "from":"2015/10/01 00:00:00",
-    "to":"2015/12/31 00:00:00",
-    "outputs":[
-      {"serif":"Smart Speaker機能が搭載されました","url":"https://github.com/tetsuya-zama/smartspeaker"},
-      {"serif":"最近なんだかちょっとだけ頭が良くなった気がします"}
-    ]
+      "append_random":[
+        {
+          "speaker":"weather",
+          "owm_app_id":"7cd63966189e7e20afd65233f5dca42f",
+          "owm_location_code":"1848354",
+          "conditions":[
+           {
+            "temp":{
+             "gt":30
+            },
+            "outputs":[{"serif":"暑いですね"}]
+           },
+           {
+            "temp":{
+             "lt":30,
+             "gt":15
+            },
+            "outputs":[{"serif":"涼しいですね"}]
+           },
+           {
+            "temp":{
+             "lt":15
+            },
+            "outputs":[{"serif":"寒いですね"}]
+           }
+          ]
+        },
+        {
+          "speaker":"event",
+          "conditions":[
+            {
+            "from":"2015/10/01 00:00:00",
+            "to":"2015/12/31 00:00:00",
+            "outputs":[
+              {"serif":"Smart Speaker機能が搭載されました","url":"https://github.com/tetsuya-zama/smartspeaker"},
+              {"serif":"最近なんだかちょっとだけ頭が良くなった気がします"}
+            ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
