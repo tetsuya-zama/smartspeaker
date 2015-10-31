@@ -94,6 +94,7 @@ setting.jsonには各speakerごとの出力を入れ子構造で設定する。
 
 ###出力
 以下の3要素をjson(pythonから呼び出した場合はdict)で返す
+
 1. serif
  * 必須
  * speakerから応答されたセリフ
