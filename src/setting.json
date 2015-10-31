@@ -1,0 +1,77 @@
+[
+{
+ "speaker":"conversation",
+ "conditions":[
+   {
+     "word":"おはよう",
+     "outputs":[
+       {"serif":"おはようございます"}
+     ],
+     "append":{
+       "speaker":"time",
+       "conditions":[
+         {
+           "from":"12:00",
+           "to":"23:59",
+           "outputs":[
+             {"serif":"こんな時間におはようなんて、業界人ですね"},
+             {"serif":"もしかして芸能人の方ですか？"}
+           ]
+
+         }
+       ]
+     }
+   },
+   {
+     "word":"バイバイ",
+     "outputs":[
+       {"serif":"お疲れ様でした"}
+     ],
+     "append":{
+       "speaker":"time",
+       "conditions":[
+         {
+           "from":"20:00",
+           "to" :"23:00",
+           "outputs":[
+             {"serif":"お仕事大変ですね"},
+             {"serif":"明日は早めに退社して下さいね"}
+           ]
+         }
+       ]
+     }
+   },
+   {
+     "outputs":[
+       {"serif":"お疲れ様です"}
+     ]
+   }
+ ]
+},
+{
+  "speaker":"time",
+  "conditions":[
+  {
+    "from":"11:30",
+    "to" : "13:00",
+    "outputs":[
+      {"serif":"もうお昼ご飯は食べましたか?","url":"http://r.gnavi.co.jp/eki/0003272/lunch/"},
+      {"serif":"お昼はお野菜が多いものを食べましょう"}
+    ]
+  }
+  ]
+},
+{
+  "speaker":"event",
+  "conditions":[
+    {
+    "from":"2015/10/01 00:00:00",
+    "to":"2015/12/31 00:00:00",
+    "outputs":[
+      {"serif":"Smart Speaker機能が搭載されました","url":"https://github.com/tetsuya-zama/smartspeaker"},
+      {"serif":"最近なんだかちょっとだけ頭が良くなった気がします"}
+    ]
+    }
+  ]
+}
+]
