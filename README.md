@@ -27,7 +27,7 @@
 
 ###コマンドラインから実行
 ```shell
- $ python smartspeaker.py "おはよう"
+ $ python smartspeaker.py -word "おはよう"
 ```
 
 ###他のPythonスクリプトから実行
@@ -37,7 +37,7 @@
 import smartspeaker
 
 speaker = smartspeaker.create()
-result = speaker.speak("おはよう")
+result = speaker.speak({"word":"おはよう"})
 ```
 
 ###設定

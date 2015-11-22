@@ -36,7 +36,7 @@ class TestTimeSpeaker(unittest.TestCase):
         ]
         }"""
 
-        result = speaker.speak([],json.loads(setting_json,"utf-8"),[])
+        result = speaker.speak({},json.loads(setting_json,"utf-8"),[])
 
         self.assertEqual(len(result),1)
         self.assertTrue("serif" in result[0])
@@ -78,7 +78,7 @@ class TestTimeSpeaker(unittest.TestCase):
         ]
         }"""
 
-        result = speaker.speak([],json.loads(setting_json,"utf-8"),[])
+        result = speaker.speak({},json.loads(setting_json,"utf-8"),[])
 
         self.assertEqual(len(result),1)
         self.assertTrue("serif" in result[0])
@@ -125,7 +125,7 @@ class TestTimeSpeaker(unittest.TestCase):
         ]
         }"""
 
-        result = speaker.speak([],json.loads(setting_json,"utf-8"),[])
+        result = speaker.speak({},json.loads(setting_json,"utf-8"),[])
 
         self.assertEqual(len(result),1)
         self.assertTrue("serif" in result[0])
@@ -153,7 +153,7 @@ class TestTimeSpeaker(unittest.TestCase):
         ]
         }"""
 
-        result = speaker.speak([],json.loads(setting_json,"utf-8"),[])
+        result = speaker.speak({},json.loads(setting_json,"utf-8"),[])
 
         self.assertEqual(len(result),0)
 

@@ -30,7 +30,7 @@ class TestConversationSpeaker(unittest.TestCase):
         }]
         }"""
 
-        result = speaker.speak([u"おはよう"],json.loads(setting_json,"utf-8"),[])
+        result = speaker.speak({"word":u"おはよう"},json.loads(setting_json,"utf-8"),[])
 
         self.assertEqual(len(result),1)
         self.assertTrue("serif" in result[0])
@@ -58,7 +58,7 @@ class TestConversationSpeaker(unittest.TestCase):
         ]
         }"""
 
-        result = speaker.speak([u"バイバイ"],json.loads(setting_json,"utf-8"),[])
+        result = speaker.speak({"word":u"バイバイ"},json.loads(setting_json,"utf-8"),[])
 
         self.assertEqual(len(result),1)
         self.assertTrue("serif" in result[0])
@@ -86,7 +86,7 @@ class TestConversationSpeaker(unittest.TestCase):
         ]
         }"""
 
-        result = speaker.speak([u"こんばんわ"],json.loads(setting_json,"utf-8"),[])
+        result = speaker.speak({"word":u"こんばんわ"},json.loads(setting_json,"utf-8"),[])
 
         self.assertEqual(len(result),0)
 
@@ -113,7 +113,7 @@ class TestConversationSpeaker(unittest.TestCase):
         ]
         }"""
 
-        result = speaker.speak([u"こんばんわ"],json.loads(setting_json,"utf-8"),[])
+        result = speaker.speak({"word":u"こんばんわ"},json.loads(setting_json,"utf-8"),[])
 
         self.assertEqual(len(result),1)
         self.assertTrue("serif" in result[0])
@@ -135,7 +135,7 @@ class TestConversationSpeaker(unittest.TestCase):
         }]
         }"""
 
-        result = speaker.speak([u"おはよう"],json.loads(setting_json,"utf-8"),[])
+        result = speaker.speak({"word":u"おはよう"},json.loads(setting_json,"utf-8"),[])
 
         self.assertEqual(len(result),0)
 
@@ -155,7 +155,7 @@ class TestConversationSpeaker(unittest.TestCase):
         }]
         }"""
 
-        result = speaker.speak([u"おはよう"],json.loads(setting_json,"utf-8"),[])
+        result = speaker.speak({"word":u"おはよう"},json.loads(setting_json,"utf-8"),[])
 
         self.assertEqual(len(result),1)
         self.assertTrue("serif" in result[0])

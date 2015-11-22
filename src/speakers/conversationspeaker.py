@@ -31,10 +31,11 @@ class ConversationSpeaker(AbsSpeaker):
             rtn = None
             for cond in setting["conditions"]:
                 if "word" in cond:
-                    if not isinstance(inputs[0],unicode):
-                        inputs[0] = inputs[0].decode("utf-8")
-                    if cond["word"] == inputs[0]:
-                        rtn = cond
+                    if "word" in inputs:
+                        if not isinstance(inputs["word"],unicode):
+                            inputs["word"] = inputs["word"].decode("utf-8")
+                        if cond["word"] == inputs["word"]:
+                            rtn = cond
                 else :
                     #wordが選択されていないconditionをデフォルトとして扱う
                     if rtn == None:

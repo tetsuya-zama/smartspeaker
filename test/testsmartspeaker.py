@@ -34,7 +34,7 @@ class TestSmartSpeaker(unittest.TestCase):
 
         speaker = SmartSpeaker(json.loads(setting_json,"utf-8"))
 
-        results = speaker.speak(u"おはよう")
+        results = speaker.speak({"word":u"おはよう"})
 
         self.assertEqual(len(results),1)
         self.assertEqual(u"おはようございます",results[0]["serif"])
@@ -74,7 +74,7 @@ class TestSmartSpeaker(unittest.TestCase):
 
         speaker = SmartSpeaker(json.loads(setting_json,"utf-8"))
 
-        results = speaker.speak(u"おはよう")
+        results = speaker.speak({"word":u"おはよう"})
 
         self.assertEqual(len(results),2)
         self.assertEqual(u"おはようございます",results[0]["serif"])
@@ -133,7 +133,7 @@ class TestSmartSpeaker(unittest.TestCase):
 
         speaker = SmartSpeaker(json.loads(setting_json,"utf-8"))
 
-        results = speaker.speak(u"おはよう")
+        results = speaker.speak({"word":u"おはよう"})
 
         self.assertEqual(len(results),3)
         self.assertEqual(u"おはようございます",results[0]["serif"])
@@ -193,7 +193,7 @@ class TestSmartSpeaker(unittest.TestCase):
 
         speaker = SmartSpeaker(json.loads(setting_json,"utf-8"))
 
-        results = speaker.speak(u"おはよう")
+        results = speaker.speak({"word":u"おはよう"})
 
         self.assertEqual(len(results),2)
         self.assertEqual(u"おはようございます",results[0]["serif"])
@@ -237,7 +237,7 @@ class TestSmartSpeaker(unittest.TestCase):
 
         speaker = SmartSpeaker(json.loads(setting_json,"utf-8"))
 
-        results = speaker.speak(u"おはよう")
+        results = speaker.speak({"word":u"おはよう"})
 
         self.assertEqual(len(results),2)
         self.assertEqual(u"おはようございます",results[0]["serif"])

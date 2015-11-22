@@ -16,16 +16,12 @@ class SmartSpeaker:
         """
         self._setting = setting
 
-    def speak(self,args):
+    def speak(self,inputs):
         """speak
         設定に基づいてspeakers/xxxspeakerを実行する
         @param args 話しかける言葉 もしくは [話しかける言葉]
         #XXX argsの定義は現在仮決め
         """
-        if not isinstance(args,list):
-            inputs = [args]
-        else:
-            inputs = args
 
         if not isinstance(self._setting,list):
             speakers = [self._setting]
@@ -61,7 +57,16 @@ def create(setting_file_path = None):
 if __name__ == '__main__':
     args = sys.argv[1:]
 
+    inputs = {}
+
+    for i in range(0,len(args) - 1) :
+        if args[i].startswith("-") :
+            if args[i+1]:
+                inputs[args[i].lstrip("-")] = args[i+1]
+
+    print inputs;
+
     speaker = create()
-    result = speaker.speak(args)
+    result = speaker.speak(inputs)
 
     print json.dumps(result,ensure_ascii=False)

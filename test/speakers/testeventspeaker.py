@@ -36,7 +36,7 @@ class TestEventSpeaker(unittest.TestCase):
          ]
         }"""
 
-        result = speaker.speak([],json.loads(setting_json,"utf-8"),[])
+        result = speaker.speak({},json.loads(setting_json,"utf-8"),[])
         self.assertEqual(len(result),1)
         self.assertTrue("serif" in result[0])
         self.assertEqual(u"あけましておめでとう",result[0]["serif"])
@@ -77,7 +77,7 @@ class TestEventSpeaker(unittest.TestCase):
          ]
         }"""
 
-        result = speaker.speak([],json.loads(setting_json,"utf-8"),[])
+        result = speaker.speak({},json.loads(setting_json,"utf-8"),[])
         self.assertEqual(len(result),1)
         self.assertTrue("serif" in result[0])
         self.assertEqual(u"夏休み満喫してる？",result[0]["serif"])
@@ -123,7 +123,7 @@ class TestEventSpeaker(unittest.TestCase):
          ]
         }"""
 
-        result = speaker.speak([],json.loads(setting_json,"utf-8"),[])
+        result = speaker.speak({},json.loads(setting_json,"utf-8"),[])
         self.assertEqual(len(result),1)
         self.assertTrue("serif" in result[0])
         self.assertEqual(u"なんでも無い日常が幸せだよね",result[0]["serif"])
