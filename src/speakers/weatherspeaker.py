@@ -26,7 +26,7 @@ class WeatherSpeaker(AbsSpeaker):
          "speaker":"weather",
          "owm_app_id":"${OWMのAPPID}",
          "owm_location_code":"${OWMのロケーションコード}",
-         "conditions":{
+         "conditions":[{
           "temp":{
            gt:${摂氏n度より高い},
            lt:${摂氏n度より低い}
@@ -38,7 +38,7 @@ class WeatherSpeaker(AbsSpeaker):
           "outputs":[
           ...
           ]
-         }
+         }]
         }
         """
 

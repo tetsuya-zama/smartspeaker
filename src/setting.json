@@ -7,7 +7,7 @@
      "outputs":[
        {"serif":"おはようございます"}
      ],
-     "append":{
+     "append":[{
        "speaker":"time",
        "conditions":[
          {
@@ -20,7 +20,29 @@
 
          }
        ]
+     },
+     {
+       "speaker":"emotion",
+       "conditions":[
+         {
+           "emotion":{
+             "gt":0.7
+           },
+           "outputs":[{
+              "serif":"今日は元気そうですね！"
+             }]
+         },
+         {
+           "emotion":{
+             "lt":0.3
+           },
+           "outputs":[
+             {"serif":"元気無いですね。"}
+           ]
+         }
+       ]
      }
+    ]
    },
    {
      "word":"バイバイ",

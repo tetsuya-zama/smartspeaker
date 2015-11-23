@@ -64,8 +64,6 @@ if __name__ == '__main__':
             if args[i+1]:
                 inputs[args[i].lstrip("-")] = args[i+1]
 
-    print inputs;
-
     speaker = create()
     result = speaker.speak(inputs)
 
