@@ -153,6 +153,23 @@
              ]
         },
         {
+             "speaker":"gender",
+             "conditions":[
+             {
+              "gender":1,
+              "outputs":[
+               {"serif":"イケメンですね!"}
+              ]
+             },
+             {
+              "gender":0,
+              "outputs":[
+               {"serif":"美人さんですね!"}
+              ]
+             }
+             ]
+        },
+        {
           "speaker":"event",
           "conditions":[
             {
