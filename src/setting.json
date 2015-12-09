@@ -127,6 +127,32 @@
           ]
         },
         {
+             "speaker":"age",
+             "conditions":[
+             {
+              "age":{
+               "gt":60
+              },
+              "outputs":[
+               {"serif":"かっこいい歳の取り方ですね!"}
+              ]
+             },
+             {
+              "age":{
+               "lt":30
+              },
+              "outputs":[
+               {"serif":"お若いですね!"}
+              ]
+             },
+             {
+              "outputs":[
+               {"serif":"現役バリバリですね!"}
+              ]
+             }
+             ]
+        },
+        {
           "speaker":"event",
           "conditions":[
             {

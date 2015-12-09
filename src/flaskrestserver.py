@@ -12,10 +12,8 @@ def speak():
     speaker = smartspeaker.create()
     inputs = {}
 
-    if request.args.get('word'):
-        inputs['word'] = request.args.get('word')
-    if request.args.get('emotion'):
-        inputs['emotion'] = request.args.get('emotion')
+    for k in request.args :
+        inputs[k] = request.args.get(k)
 
     result = speaker.speak(inputs)
 
